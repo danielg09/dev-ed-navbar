@@ -27,6 +27,92 @@ nav{
 
 .nav-links{
     list-style: none;
+    background-color: #5d4954;
+    position: fixed;
+    right: 0;
+    top: 8vh;
+    height: 92vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-links li{
+    opacity: 0;
+}
+
+.burger{
+    display: block;
+    cursor: pointer;
+}
+
+.burger-line{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+@media screen and (min-width:768px) {
+    .burger{
+        display: none;
+    }
+
+    .nav-links{       
+        flex-direction: row;
+        justify-content: space-around;
+        position: initial;
+        width: 50%;
+        height: initial;
+        transform: initial;
+    }
+
+    .nav-links li{
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .nav-links{
+        width: 30%;
+    }
+}
+
+/* 
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #5d4954;
+}
+
+.logo{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links{
+    list-style: none;
     display: flex;
     width: 30%;
     justify-content: space-around;
@@ -38,11 +124,11 @@ nav{
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 14px;
-}
+} */
 
 /* mobile version */
 
-.burger{
+/* .burger{
     display: none;
     cursor: pointer;
 }
@@ -89,10 +175,8 @@ nav{
     }
 }
 
-.nav-active{
-    transform: translateX(0%);
-}
 
+*/
 @keyframes navLinkFade {
     from{
         opacity: 0;
@@ -114,4 +198,4 @@ nav{
 
 .toggle .line-3{
     transform: rotate(45deg)  translate(-5px,-6px);
-}
+} 
